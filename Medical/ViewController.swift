@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     @IBAction func signin(_ sender: Any) {
             var emailValue: String!
             emailValue = String(EmailText.text!)
-//            print(String(emailValue).self)
-//            login(emaill: emailValue)
+            print(String(emailValue).self)
+            login(emaill: emailValue)
     }
     
 //    @IBAction func auth(_ sender: UIButton) {
