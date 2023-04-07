@@ -92,3 +92,51 @@ class Codes: UIButton {
         }
     }
 }
+
+class avatar: UIImageView {
+
+    convenience init(type: UIImageView.Type) {
+        self.init(type: type)
+        clipsToBounds = true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        clipsToBounds = true
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        clipsToBounds = true
+    }
+    
+    override var clipsToBounds: Bool {
+        didSet {
+            layer.cornerRadius = 60
+        }
+    }
+}
+
+class viewAnalyze: UIView {
+
+    convenience init(type: UIView.Type) {
+        self.init(type: type)
+        clipsToBounds = true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        clipsToBounds = true
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        clipsToBounds = true
+    }
+    
+    override var clipsToBounds: Bool {
+        didSet {
+            layer.cornerRadius = 12
+        }
+    }
+}

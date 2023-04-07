@@ -8,13 +8,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var EmailText: UITextField!    
+    @IBOutlet weak var EmailText: UITextField!
+    
     @IBAction func signin(_ sender: Any) {
             var emailValue: String!
             emailValue = String(EmailText.text!)
             print(String(emailValue).self)
             login(emaill: emailValue)
     }
+    
+    @IBOutlet weak var basket: UIView!
+    @IBOutlet weak var add1: UIButton!
+    @IBAction func add(_ sender: UIButton) {
+        weak var add: UIButton? = add1
+        weak var basket: UIView? = basket
+        
+        add?.layer.borderColor = UIColor.blue.cgColor
+        add?.layer.borderWidth = 1
+        add?.backgroundColor = UIColor.white
+        
+        basket?.isHidden = false
+        
+    }
+    
     
 //    @IBAction func auth(_ sender: UIButton) {
 //        guard let url = URL(string: "https://medic.madskill.ru/api/sendCode") else { return }
